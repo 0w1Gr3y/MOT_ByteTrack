@@ -27,14 +27,4 @@ cd YOLOX python setup.py develop cd ..
 # prepare videos for input
     ! https://www.youtube.com/watch?v=MNn9qKG2UFI&t=8s&ab_channel=KarolMajek
 
-# videos
-
-
-
-https://www.youtube.com/watch?v=jjlBnrzSGjc&list=PLcQZGj9lFR7y5WikozDSrdk6UCtAnM9mB&ab_channel=PanasonicSecurity
-https://www.youtube.com/watch?v=MNn9qKG2UFI&list=PLcQZGj9lFR7y5WikozDSrdk6UCtAnM9mB&index=2&ab_channel=KarolMajek
-https://www.youtube.com/watch?v=PSf09R3D7Lo&list=PLcQZGj9lFR7y5WikozDSrdk6UCtAnM9mB&index=3&ab_channel=PanasonicSecurity
-https://www.youtube.com/watch?v=s5Bf_KEtoyM&list=PLcQZGj9lFR7y5WikozDSrdk6UCtAnM9mB&index=9&ab_channel=PanasonicSecurity
-https://www.youtube.com/watch?v=PJ5xXXcfuTc&list=PLcQZGj9lFR7y5WikozDSrdk6UCtAnM9mB&index=40&ab_channel=Supercircuits
-
 
