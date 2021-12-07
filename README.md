@@ -4,7 +4,7 @@ The folder "tracker" contains only the code required to run BYTETracker class an
 
 For the original implementation please visit [https://github.com/ifzhang/ByteTrack](https://github.com/ifzhang/ByteTrack).
 
-YOLOX is the latest YOLO iteration available in [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)
+Using this repository you can use YOLOX cloned from [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)
 
 <details>
 <summary>Installation</summary>
@@ -82,6 +82,6 @@ youtube-dl -f 313 MNn9qKG2UFI
 
 ```shell
 python .\main.py  --name yolox-m --ckpt weights/yolox_m.pth --video_input assets/KarolMajek720.avi --video_output output_yolox_m.avi
-python .\main_detector.py --name yolox-m --ckpt weights/yolox_m.pth --video_input assets/KarolMajek720.avi --video_output output_yolox-det-m.avi
+python .\main_detector.py --name yolox-m --ckpt weights/yolox_m.pth --video_input assets/KarolMajek720.avi --video_output output_yolox-m-det.avi
 ```
 </details>

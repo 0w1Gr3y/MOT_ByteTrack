@@ -4,7 +4,7 @@ from YOLOX.yolox.data.datasets import COCO_CLASSES
 from YOLOX.yolox.data.data_augment import ValTransform
 from loguru import logger
 import torch
-from YOLOX.yolox.utils import fuse_model, postprocess, vis
+from YOLOX.yolox.utils import fuse_model, postprocess, vis, get_model_info
 
 
 class Predictor(object):
@@ -12,19 +12,22 @@ class Predictor(object):
             self,
             ckpt,
             name,
-            confthre = 0.1,
-            nmsthre = 0.4,
-            fuse=False,
+            confthre=0.01,
+            nmsthre=0.4,
+            fuse=True,
             device="gpu",
-            fp16=False,
+            fp16=True,
             legacy=False,
     ):
         self.exp = get_exp(None, name)
         self.exp.test_conf = confthre
         self.exp.nmsthre = nmsthre
         self.exp.test_size = (640, 640)
+        # Initialize model
         model = self.exp.get_model()
-        model.cuda()
+        logger.info("Model Summary: {}".format(get_model_info(model, self.exp.test_size)))
+        if device == "gpu":
+            model.cuda()
         model.eval()
 
         ckpt_file = ckpt
@@ -35,10 +38,11 @@ class Predictor(object):
         if fuse:
             logger.info("\tFusing model...")
             model = fuse_model(model)
-
+        if device == "gpu" and fp16:
+            model.half()  # to FP16
+        # model initialized
         self.model = model
         self.cls_names = COCO_CLASSES
-
         self.num_classes = self.exp.num_classes
         self.confthre = self.exp.test_conf
         self.nmsthre = self.exp.nmsthre

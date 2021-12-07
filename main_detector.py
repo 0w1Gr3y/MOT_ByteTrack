@@ -2,10 +2,9 @@ from VideoPlayer import VideoPlayer
 import cv2 as cv
 from Predictor import Predictor
 import argparse
-import time
 from utils import show_image
 
-# python .\main_detector.py --name yolox-m --ckpt weights/yolox_m.pth --video_input assets/KarolMajek720.avi --video_output output_yolox-det-m.avi
+# python .\main_detector.py --name yolox-m --ckpt weights/yolox_m.pth --video_input assets/KarolMajek720.avi --video_output output_yolox-m-det.avi
 if __name__ == '__main__':
     parser = argparse.ArgumentParser("YOLOX + ByteTrack Demo")
     # video input and outputs
@@ -19,7 +18,7 @@ if __name__ == '__main__':
                         help="model name [yolox-s, yolox-m, yolox-l, yolox-x]")
     parser.add_argument("-c", "--ckpt", default='weights/yolox_m.pth', type=str, required=True,
                         help="weights file for the model")
-    parser.add_argument("--det_thresh", type=float, default=0.1, help="YOLOX confidence threshold")
+    parser.add_argument("--det_thresh", type=float, default=0.01, help="YOLOX confidence threshold")
     parser.add_argument("--det_nmsthresh", type=float, default=0.4,
                         help="YOLOX non-maximum supression threshold threshold")
     args = parser.parse_args()
