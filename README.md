@@ -9,14 +9,15 @@ Using this repository you can use YOLOX cloned from [YOLOX repository](https://g
 <details>
 <summary>Installation</summary>
 
-1. Install python requirements
+1. Download source code from [MOT_ByteTrack repository](https://github.com/0w1Gr3y/MOT_ByteTrack). Open it as root folder in your IDE
+2. Install python requirements
 
 ```shell
 pip3 install -r tracker/requirements.txt
 ```
 
-2. Download and install CUDA on your PC
-3. Install pytorch: [follow this manual](https://pytorch.org/get-started/locally/)
+3. Download and install CUDA on your PC
+4. Install pytorch: [follow this manual](https://pytorch.org/get-started/locally/)
 
 ```shell
 # This is an example of a command line, generated with https://pytorch.org/get-started/locally/
@@ -24,7 +25,7 @@ pip3 install -r tracker/requirements.txt
 pip3 install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio===0.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 ```
 
-4. Install **pycocotools**
+5. Install **pycocotools**
 * For Ubuntu:
 ```shell
 pip3 install cython; pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
@@ -35,7 +36,7 @@ pip3 install cython
 pip3 install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 ```
 
-5. Install **cython_box**
+6. Install **cython_box**
 * Ubuntu
 ```shell
 pip3 install cython_bbox
