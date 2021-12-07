@@ -1,11 +1,11 @@
-import time
 from YOLOX.yolox.exp import get_exp
 from YOLOX.yolox.data.datasets import COCO_CLASSES
 from YOLOX.yolox.data.data_augment import ValTransform
+from YOLOX.yolox.utils import fuse_model, postprocess, vis, get_model_info
+import time
 from loguru import logger
 import torch
-from YOLOX.yolox.utils import fuse_model, postprocess, vis, get_model_info
-
+import cv2 as cv
 
 class Predictor(object):
     def __init__(
@@ -113,4 +113,9 @@ class Predictor(object):
         scores = output[:, 4] * output[:, 5]
 
         vis_res = vis(img, bboxes, scores, cls, self.confthre, self.cls_names)
+        cv.putText(vis_res, 'FPS: %.2f' % (1.0 / self.det_time),
+                   (0, 30), cv.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), thickness=6, lineType=cv.LINE_AA)
+        cv.putText(vis_res, 'FPS: %.2f' % (1.0 / self.det_time),
+                   (0, 30), cv.FONT_HERSHEY_PLAIN, 2, (255, 255, 255), thickness=2,
+                   lineType=cv.LINE_AA)
         return vis_res
