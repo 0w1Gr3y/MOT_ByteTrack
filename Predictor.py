@@ -12,14 +12,16 @@ class Predictor(object):
             self,
             ckpt,
             name,
+            confthre = 0.1,
+            nmsthre = 0.4,
             fuse=False,
             device="gpu",
             fp16=False,
             legacy=False,
     ):
         self.exp = get_exp(None, name)
-        self.exp.test_conf = 0.1
-        self.exp.nmsthre = 0.4
+        self.exp.test_conf = confthre
+        self.exp.nmsthre = nmsthre
         self.exp.test_size = (640, 640)
         model = self.exp.get_model()
         model.cuda()
