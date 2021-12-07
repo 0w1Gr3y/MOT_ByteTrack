@@ -4,7 +4,7 @@ The folder "tracker" contains only the code required to run BYTETracker class an
 
 For the original implementation please visit [https://github.com/ifzhang/ByteTrack](https://github.com/ifzhang/ByteTrack).
 
-Using this repository you can use YOLOX cloned from [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)
+YOLOX is the latest YOLO iteration available in [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)
 
 <details>
 <summary>Installation</summary>
