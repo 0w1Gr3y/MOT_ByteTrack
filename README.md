@@ -1,6 +1,8 @@
 # Multiple Object Tracker with YOLOX and ByteTrack 
+This repository contains YOLOX+ByteTrack integration source code.
+
 The source code in the folder "tracker" is copied from [ByteTrack repository](https://github.com/ifzhang/ByteTrack).
-The folder "tracker" contains only the code required to run BYTETracker class and nothing else.
+The folder "tracker" contains only the code required to run BYTETracker class.
 
 For the original implementation please visit [https://github.com/ifzhang/ByteTrack](https://github.com/ifzhang/ByteTrack).
 
