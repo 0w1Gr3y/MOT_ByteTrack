@@ -87,11 +87,12 @@ python .\main_detector.py --name yolox-m --ckpt weights/yolox_m.pth --video_inpu
 ```
 </details>
   
- <details>
- <summary>Demo videos</summary>
- You can check demo videos of YOLOX+ByteTrack integration on traffic monitoring task here:
- * [yolox-s](https://youtu.be/_S2-DHyrzyI)
- * [yolox-m](https://youtu.be/KzNFnRrAWCE)
- * [yolox-l](https://youtu.be/hT6AzAWfl-A)
- * [yolox-x](https://youtu.be/T7U0XzLAOzU)
- </details>
+<details>
+<summary>Demo videos</summary>
+
+You can check demo videos of YOLOX+ByteTrack integration on traffic monitoring task here:
+* [yolox-s](https://youtu.be/_S2-DHyrzyI)
+* [yolox-m](https://youtu.be/KzNFnRrAWCE)
+* [yolox-l](https://youtu.be/hT6AzAWfl-A)
+* [yolox-x](https://youtu.be/T7U0XzLAOzU)
+</details>
