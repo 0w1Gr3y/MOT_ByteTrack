@@ -79,7 +79,7 @@ youtube-dl -f 313 MNn9qKG2UFI
 </details>
 
 <details>
-<summary>Run</summary>
+<summary>How to run</summary>
 
 ```shell
 python .\main.py  --name yolox-m --ckpt weights/yolox_m.pth --video_input assets/KarolMajek720.avi --video_output output_yolox_m.avi
