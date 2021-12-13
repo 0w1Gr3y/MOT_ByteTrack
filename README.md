@@ -86,3 +86,12 @@ python .\main.py  --name yolox-m --ckpt weights/yolox_m.pth --video_input assets
 python .\main_detector.py --name yolox-m --ckpt weights/yolox_m.pth --video_input assets/KarolMajek720.avi --video_output output_yolox-m-det.avi
 ```
 </details>
+  
+ <details>
+ <summary>Demo videos</summary>
+ You can check demo videos of YOLOX+ByteTrack integration on traffic monitoring task here:
+ * [yolox-s](https://youtu.be/_S2-DHyrzyI)
+ * [yolox-m](https://youtu.be/KzNFnRrAWCE)
+ * [yolox-l](https://youtu.be/hT6AzAWfl-A)
+ * [yolox-x](https://youtu.be/T7U0XzLAOzU)
+ </details>
