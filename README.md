@@ -1,15 +1,13 @@
 # Multiple Object Tracker with YOLOX and ByteTrack 
-The source code in the folder "tracker" is copied from [ByteTrack repository](https://github.com/ifzhang/ByteTrack)
+The source code in the folder "tracker" is copied from [ByteTrack repository](https://github.com/ifzhang/ByteTrack).
 The folder "tracker" contains only the code required to run BYTETracker class and nothing else.
 
 For the original implementation please visit [https://github.com/ifzhang/ByteTrack](https://github.com/ifzhang/ByteTrack).
 
-Using this repository you can use YOLOX cloned from [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)
-
 <details>
 <summary>Installation</summary>
 
-1. Download source code from [MOT_ByteTrack repository](https://github.com/0w1Gr3y/MOT_ByteTrack). Open it as root folder in your IDE
+1. Download YOLOX+ByteTrack integration source code from [this repository](https://github.com/0w1Gr3y/MOT_ByteTrack). Open it as the root folder in your IDE
 2. Install python requirements
 
 ```shell
@@ -17,7 +15,7 @@ pip3 install -r tracker/requirements.txt
 ```
 
 3. Download and install CUDA on your PC
-4. Install pytorch: [follow this manual](https://pytorch.org/get-started/locally/)
+4. Install pytorch with cuda support: generate command line using [this manual](https://pytorch.org/get-started/locally/)
 
 ```shell
 # This is an example of a command line, generated with https://pytorch.org/get-started/locally/
@@ -26,34 +24,35 @@ pip3 install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio===0.10.0+c
 ```
 
 5. Install **pycocotools**
-* For Ubuntu:
+* For Ubuntu use:
 ```shell
 pip3 install cython; pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 ```
-* For Windows:
+* For Windows use:
 ```shell
 pip3 install cython
 pip3 install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 ```
 
 6. Install **cython_box**
-* Ubuntu
+* For Ubuntu use:
 ```shell
 pip3 install cython_bbox
 ```
-* Windows
+* For Windows use:
 ```shell
 pip install -e git+https://github.com/samson-wang/cython_bbox.git#egg=cython-bbox
 ```
 
 ### Install YOLOX
+1. Clone YOLOX github repository and run setup
 ```shell
 git clone https://github.com/Megvii-BaseDetection/YOLOX.git
 cd YOLOX
 python setup.py develop
 cd ..
 ```
-download YOLOX weights to _weights_ folder from [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)
+2. Download YOLOX weights to _weights_ folder from [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)
 #### Standard Models (source: [YOLOX repository](https://github.com/Megvii-BaseDetection/YOLOX)).
 |Model |size |mAP<sup>val<br>0.5:0.95 |mAP<sup>test<br>0.5:0.95 | Speed V100<br>(ms) | Params<br>(M) |FLOPs<br>(G)| weights |
 | ------        |:---: | :---:    | :---:       |:---:     |:---:  | :---: | :----: |
