@@ -45,7 +45,7 @@ def plot_tracking(image, tlwhs, obj_ids, scores=None, frame_id=0, fps=0., ids2=N
     # congestion warning
     your_threshold = 25
     if len(tlwhs) >= your_threshold:
-    cv.putText(im, 'congestion warning!', (0, int(30 * text_scale)), cv.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), thickness=6, lineType=cv.LINE_AA)
-	    cv.putText(im, 'congestion warning!', (0, int(30 * text_scale)), cv.FONT_HERSHEY_PLAIN, 2, (0, 0, 255), thickness=2, lineType=cv.LINE_AA)
+    	cv.putText(im, 'congestion warning!', (0, int(30 * text_scale)), cv.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), thickness=6, lineType=cv.LINE_AA)
+	cv.putText(im, 'congestion warning!', (0, int(30 * text_scale)), cv.FONT_HERSHEY_PLAIN, 2, (0, 0, 255), thickness=2, lineType=cv.LINE_AA)
     '''
     return im
